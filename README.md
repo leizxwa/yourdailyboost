@@ -1,3 +1,3 @@
 # yourdailyboost
 daily motivation
-https://yourdailyboost.netlify.ap
+https://yourdailyboost.netlify.app
