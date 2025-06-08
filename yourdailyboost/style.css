@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/* --- Animation Keyframes --- */
+
+/* Keyframes for the moving gradient background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Keyframes for the text fade-in and slide-up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Main Styles --- */
+
+body {
+    /* Using a multi-color gradient for the background */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    
+    /* Change default text color to white for better contrast */
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    overflow: hidden;
+
+    /* Applying the gradient animation to the body */
+    /* It runs for 15 seconds, eases in and out, and loops forever */
+    animation: gradientAnimation 15s ease infinite;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center;     /* Center horizontally */
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    
+    /* Applying the fade-in animation when the page loads */
+    /* It runs for 1.5 seconds and stays at its final state */
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+#date-container, #time-container {
+    width: 100%;
+    margin-bottom: 10px;
+    color: #eeeeee; /* Lighter color for secondary text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Shadow for readability */
+}
+
+.motivation-card {
+    background: none;
+    padding: 0;
+    width: 100%;
+}
+
+#motivation-text {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff; /* Ensure main text is white */
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    /* Adding a text shadow to make it pop from the animated background */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Media query to make font smaller on mobile devices */
+@media (max-width: 600px) {
+    #motivation-text {
+        font-size: 1.8em;
+    }
+}
