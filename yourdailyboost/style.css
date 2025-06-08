@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    overflow: hidden;
+}
+
+.split-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.graphic-pane, .text-pane {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graphic-pane {
+    flex-basis: 40%;
+    background-color: #f4f4f4;
+}
+
+.text-pane {
+    flex-basis: 60%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.graphic-element {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    gap: 10px;
+}
+
+.graphic-element .square {
+    width: 50px;
+    height: 50px;
+    background-color: #d0d0d0;
+    border: 2px solid #1a1a1a;
+}
+.graphic-element .square:nth-child(2) { background-color: #e0e0e0; }
+.graphic-element .square:nth-child(5) { background-color: #f0f0f0; }
+.graphic-element .square:nth-child(8) { background-color: #ffffff; }
+
+
+#date-container, #time-container {
+    width: 100%;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.motivation-card {
+    background: none;
+    padding: 0;
+    width: 100%;
+}
+
+#motivation-text {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 2px;
+}
